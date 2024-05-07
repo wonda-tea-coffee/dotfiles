@@ -1,0 +1,12 @@
+[ghq]
+	root = ~/ghq
+[user]
+	email = lagrange.resolvent@gmail.com
+	name = wonda-tea-coffee
+[core]
+	editor = vim
+[push]
+	default = current
+	autoSetupRemote = true
+[alias]
+    vacuum = "!f () { git switch $1; git branch --merged | egrep -v '^\\* develop$' | xargs git branch -d; git fetch --prune; };f"
