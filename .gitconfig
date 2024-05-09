@@ -2,7 +2,7 @@
 	email = lagrange.resolvent@gmail.com
 	name = wonda-tea-coffee
 [alias]
-    vacuum = "!f () { git switch $1; git branch --merged | egrep -v '^\\* develop$' | xargs git branch -d; git fetch --prune; };f"
+	vacuum = "!f () { git switch $1; git branch --merged | egrep -v '^\\* develop$' | xargs git branch -d; git fetch --prune; };f"
 [ghq]
 	root = ~/ghq
 [core]
