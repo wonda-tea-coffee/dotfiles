@@ -2,7 +2,7 @@
 	email = lagrange.resolvent@gmail.com
 	name = wonda-tea-coffee
 [alias]
-	vacuum = "!f () { git switch $1; git branch --merged | egrep -v '^\\* develop$' | xargs git branch -d; git fetch --prune; };f"
+	vacuum = "!f () { git switch develop; git pull; git branch --merged | egrep -v '^\\* develop$' | xargs git branch -d; git fetch --prune; };f"
 [ghq]
 	root = ~/ghq
 [core]
@@ -14,5 +14,9 @@
 [init]
 	defaultBranch = main
 [push]
-	default = current
+	default = simple
 	autoSetupRemote = true
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
